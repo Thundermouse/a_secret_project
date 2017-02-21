@@ -6,3 +6,5 @@ Develop Environment: python 2.7
 
 Reference:
 1.https://www.coursera.org/specializations/data-science-python
+2.http://www.pythonlearn.com/html-270/
+
