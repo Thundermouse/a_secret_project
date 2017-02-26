@@ -7,8 +7,11 @@ class MApp(wx.App):
         self.Bind(wx.EVT_BUTTON, self.ButtonDetector)
         self.SetTopWindow(self.Mframe)
     def ButtonDetector(self,event):
-        print "MainApp Class Search"
+        print "MainApp Event Button:"+event.GetEventObject().GetLabel()
+        if event.GetEventObject().GetLabel() == "Search":
+            print "MainApp Event Search for:"+self.Mframe.tc.GetValue() #Search Operation
+        elif event.GetEventObject().GetLabel() == "Close":
+            exit()
 if __name__ == '__main__':
     app = MApp(None)
-    #MainWin(None,title="Search Engine")
     app.MainLoop()
